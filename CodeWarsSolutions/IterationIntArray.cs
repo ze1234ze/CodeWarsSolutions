@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 1,5,3-- > 5(1 + 4)
 namespace CodeWarsSolutions
 {
-    internal class EterationIntArray
+    internal class IterationIntArray
     {
     }
     public static int SequenceSum(int start, int end, int step)

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace CodeWarsSolutions
 
 {
-    internal class StringFirstLeterToUpperCase
+    internal class StringFirstLetterToUpperCase
     {
     }
     public static string Greet(string name)
