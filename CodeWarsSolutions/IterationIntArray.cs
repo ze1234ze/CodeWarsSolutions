@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-2,2,2-- > 2
-2,6,2-- > 12(2 + 4 + 6)
-1,5,1-- > 15(1 + 2 + 3 + 4 + 5)
-1,5,3-- > 5(1 + 4)
+
+//2,2,2-- > 2
+//2,6,2-- > 12(2 + 4 + 6)
+//1,5,1-- > 15(1 + 2 + 3 + 4 + 5)
+//1,5,3-- > 5(1 + 4)
+
 namespace CodeWarsSolutions
 {
     internal class IterationIntArray
