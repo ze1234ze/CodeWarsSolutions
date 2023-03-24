@@ -11,12 +11,11 @@ namespace CodeWarsSolutions
 {
     internal class RemoveFirstAndLastLetter
     {
-    }
-    public static string Remove_char(string s)
+    public static string Remove_char1(string s)
     {
         return Regex.Replace(s, "^.|.$", "");
     }
-    public static string Remove_char(string s)
+    public static string Remove_char2(string s)
     {
         char[] letras = new char[s.Length - 2];
         for (int i = 1; i < s.Length - 1; i++)
@@ -25,9 +24,10 @@ namespace CodeWarsSolutions
         }
         return new string(letras);
     }
-    public static string Remove_char(string s)
+    public static string Remove_char3(string s)
     {
         return s[1..^1];
     }
-    public static string Remove_char(string s) => s.Remove(s.Length - 1).Remove(0, 1);
+    public static string Remove_char4(string s) => s.Remove(s.Length - 1).Remove(0, 1);
+}
 }

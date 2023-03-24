@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System;
+using System.Web;
 using System.Collections.Generic;
+
 
 namespace CodeWarsSolutions
 {
     internal class IEnumerableExample
     {
-    }
 
     // This method gives us appotrynity to Iterate in array that contains not only one type: example int, string
 
-namespace IEnumerableInterface
-    {
+
         public partial class Default : System.Web.UI.Page
         {
             protected void Page_Load(object sender, EventArgs e)
@@ -72,3 +72,4 @@ namespace IEnumerableInterface
         }
     }
 }
+

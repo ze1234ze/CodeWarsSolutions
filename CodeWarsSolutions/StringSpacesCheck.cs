@@ -20,9 +20,8 @@ namespace CodeWarsSolutions
 {
     internal class StringSpacesCheck
     {
-    }
 
-    public static bool ValidSpacing(string s)
+    public static bool ValidSpacing1(string s)
     {
         if (s.Length != s.Trim().Length)
         {
@@ -37,7 +36,7 @@ namespace CodeWarsSolutions
         return true;
     }
 
-    public static bool ValidSpacing(string input)
+    public static bool ValidSpacing2(string input)
     {
         if (input == "")
         {
@@ -57,17 +56,17 @@ namespace CodeWarsSolutions
         return true;
     }
 
-    public static bool ValidSpacing(string s)
+    public static bool ValidSpacing3(string s)
     {
         return s.Trim(' ') == s && !s.Contains("  ");
     }
 
-    public static bool ValidSpacing(string s)
+    public static bool ValidSpacing4(string s)
     {
         return s.Equals(string.Join(' ', s.Split(' ').Where(s => !string.IsNullOrEmpty(s))));
     }
 
-    public static bool ValidSpacing(string s)
+    public static bool ValidSpacing5(string s)
     {
         for (int i = 0; i < s.Length; i++)
         {
@@ -79,5 +78,7 @@ namespace CodeWarsSolutions
         return true;
     }
 
+
+}
 
 }

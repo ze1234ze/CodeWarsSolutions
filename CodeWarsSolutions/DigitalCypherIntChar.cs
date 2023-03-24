@@ -34,8 +34,7 @@ namespace CodeWarsSolutions
 {
     internal class DigitalCypherIntChar
     {
-    }
-    public static int[] Encode(string str, int n)
+    public static int[] Encode1(string str, int n)
     {
         string sN = n.ToString();              // 1939 => "1939"
         char[] chN = sN.ToCharArray();         // {'1', '9', '3', '9'}
@@ -54,7 +53,7 @@ namespace CodeWarsSolutions
         return nRet;
     }
 
-    public static int[] Encode(string str, int n)
+    public static int[] Encode2(string str, int n)
     {
         var coded = new int[str.Length];
         var map = n.ToString();
@@ -66,7 +65,7 @@ namespace CodeWarsSolutions
         return coded;
     }
 
-    public static int[] Encode(string str, int n)
+    public static int[] Encode3(string str, int n)
     {
         int[] result = new int[str.Length];
         string nStr = n.ToString();
@@ -89,15 +88,16 @@ namespace CodeWarsSolutions
         return result;
     }
 
-    public static int[] Encode(string str, int n)
+    public static int[] Encode4(string str, int n)
     {
         string s = n.ToString();
         return str.Select((x, i) => x - 96 + (s[i % s.Length] - '0')).ToArray();
     }
 
-    public static int[] Encode(string str, int n) => str.Select((c, i) => c + n.ToString()[i % n.ToString().Length] - 144).ToArray();
+    public static int[] Encode5(string str, int n) => str.Select((c, i) => c + n.ToString()[i % n.ToString().Length] - 144).ToArray();
 
 
 
 
+}
 }

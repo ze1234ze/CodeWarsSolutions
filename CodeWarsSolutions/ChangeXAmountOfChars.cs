@@ -20,8 +20,7 @@ namespace CodeWarsSolutions
 {
     internal class ChangeXAmountOfChars
     {
-    }
-    public static string Maskify(string cc)
+    public static string Maskify1(string cc)
     {
         int len = cc.Length;
         if (len <= 4)
@@ -29,7 +28,7 @@ namespace CodeWarsSolutions
 
         return cc.Substring(len - 4).PadLeft(len, '#');
     }
-    public static string Maskify(string cc)
+    public static string Maskify2(string cc)
     {
         var cs = cc.ToCharArray();
 
@@ -40,22 +39,22 @@ namespace CodeWarsSolutions
 
         return string.Concat(cs);
     }
-    public static string Maskify(string cc)
+    public static string Maskify3(string cc)
     {
         return Regex.Replace(cc, ".(?=.{4})", "#");
     }
-    public static string Maskify(string cc)
+    public static string Maskify4(string cc)
     {
         if (cc.Length < 5)
             return cc;
 
         return new String('#', cc.Length - 4) + cc.Substring(cc.Length - 4);
     }
-    public static string Maskify(string cc)
+    public static string Maskify5(string cc)
     {
         return string.Concat(cc.TakeLast(4)).PadLeft(cc.Length, '#');
     }
-    public static string Maskify(string cc)
+    public static string Maskify6(string cc)
     {
         if (cc.Length < 5) return cc;
 
@@ -63,7 +62,7 @@ namespace CodeWarsSolutions
 
         return s + cc.Substring(cc.Length - 4);
     }
-    public static string Maskify(string cc)
+    public static string Maskify7(string cc)
     {
         int j = cc.Length;
 
@@ -74,4 +73,6 @@ namespace CodeWarsSolutions
 
         return s + cc.Substring(i);
     }
+}
+
 }

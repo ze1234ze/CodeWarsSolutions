@@ -12,8 +12,7 @@ namespace CodeWarsSolutions
 {
     internal class FindTheShortestString
     {
-    }
-    public static int FindShort(string s)
+    public static int FindShort1(string s)
     {
         string[] strArr = s.Split(' ');
         int maxx = int.MaxValue;
@@ -27,16 +26,18 @@ namespace CodeWarsSolutions
         }
         return maxx;
     }
-    public static int FindShort(string s)
+    public static int FindShort2(string s)
     {
         return s.Split(' ').Min(x => x.Length);
     }
-    public static int FindShort(string str)
+    public static int FindShort3(string str)
     {
         return str.Split(' ').Select(elem => elem.Length).Min();
     }
-    public static int FindShort(string s)
+    public static int FindShort4(string s)
     {
         return s.Split(' ').OrderBy(str => str.Length).First().Length;
     }
+}
+
 }

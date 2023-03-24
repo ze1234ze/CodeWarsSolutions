@@ -25,8 +25,7 @@ namespace CodeWarsSolutions
 {
     internal class ArrayOfObjectIntString
     {
-    }
-    public static int DivCon(object[] arr)
+    public static int DivCon1(object[] arr)
     {
         int strings = 0, ints = 0;
 
@@ -44,13 +43,13 @@ namespace CodeWarsSolutions
 
         return ints - strings;
     }
-    public static int DivCon(Object[] objArray)
+    public static int DivCon2(Object[] objArray)
     {
         return objArray.Where(o => o.GetType() == typeof(int)).Sum(x => (int)x) -
                objArray.Where(o => o.GetType() == typeof(string)).Sum(x => int.Parse(x.ToString()));
 
     }
-    public static int DivCon(Object[] objArray)
+    public static int DivCon3(Object[] objArray)
     {
         int res = 0;
         foreach (object o in objArray)
@@ -59,7 +58,7 @@ namespace CodeWarsSolutions
         }
         return res;
     }
-    public static int DivCon(Object[] objArray)
+    public static int DivCon4(Object[] objArray)
     {
         var stringTotal = 0;
         var intTotal = 0;
@@ -79,7 +78,7 @@ namespace CodeWarsSolutions
         }
         return intTotal - stringTotal;
     }
-    public static object DivCon(Object[] objArray)
+    public static object DivCon5(Object[] objArray)
     {
         int g = 0, a = 0, b = 0, c = 0, d = 0;
 
@@ -99,9 +98,11 @@ namespace CodeWarsSolutions
         g = d - b;
         return g;
     }
-    public static int DivCon(object[] objArray)
+    public static int DivCon6(object[] objArray)
     {
         return objArray.Sum(o => (o is int ? 1 : -1) * int.Parse(o.ToString()));
     }
-    public static int DivCon(Object[] objArray) => objArray.Sum(t => (t is int) ? (int)t : -int.Parse((string)t));
+    public static int DivCon7(Object[] objArray) => objArray.Sum(t => (t is int) ? (int)t : -int.Parse((string)t));
+}
+
 }

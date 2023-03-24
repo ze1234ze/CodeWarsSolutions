@@ -11,9 +11,8 @@ namespace CodeWarsSolutions
 {
     internal class IntCountWithoutFive
     {
-    }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive1(int start, int end)
     {
         int count = 0;
         for (int i = end; i >= start; i--)
@@ -22,7 +21,7 @@ namespace CodeWarsSolutions
         return count;
     }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive2(int start, int end)
     {
         int count = 0;
         for (int i = start; i <= end; i++)
@@ -34,17 +33,17 @@ namespace CodeWarsSolutions
         return count;
     }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive3(int start, int end)
     {
         return Enumerable.Range(start, end - start + 1).Count(x => !x.ToString().Contains("5"));
     }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive4(int start, int end)
     {
         return Enumerable.Range(start, end - start + 1).Count(i => i.ToString().IndexOf('5') == -1);
     }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive5(int start, int end)
     {
         int count = 0;
 
@@ -55,7 +54,7 @@ namespace CodeWarsSolutions
         return count;
     }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive6(int start, int end)
     {
         List<int> numberCollection = new List<int>();
         // Get all numbers within the range
@@ -79,9 +78,11 @@ namespace CodeWarsSolutions
         return count;
     }
 
-    public static int DontGiveMeFive(int start, int end)
+    public static int DontGiveMeFive7(int start, int end)
     {
         return Enumerable.Range(start, end - start + 1).Count(x => !x.ToString().Contains("5"));
     }
+
+}
 
 }

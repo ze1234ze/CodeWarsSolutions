@@ -11,12 +11,11 @@ namespace CodeWarsSolutions
 {
     internal class StringEndsWith
     {
-    }
-    public static bool Solution(string str, string ending)
+    public static bool Solution1(string str, string ending)
     {
         return str.EndsWith(ending);
     }
-    public static bool Solution(string str, string ending) => str.EndsWith(ending);
+    public static bool Solution2(string str, string ending) => str.EndsWith(ending);
     public static bool Solution_HandWritten(string str, string ending)
     {
         if (str == null || ending == null || ending.Length > str.Length)
@@ -38,4 +37,6 @@ namespace CodeWarsSolutions
 
         return endingIndex < 0;
     }
+}
+
 }

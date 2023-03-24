@@ -13,8 +13,7 @@ namespace CodeWarsSolutions
 {
     internal class IterationIntArray
     {
-    }
-    public static int SequenceSum(int start, int end, int step)
+    public static int SequenceSum1(int start, int end, int step)
     {
         int sum = 0;
 
@@ -25,7 +24,7 @@ namespace CodeWarsSolutions
 
         return sum;
     }
-    public static int SequenceSum(int start, int end, int step)
+    public static int SequenceSum2(int start, int end, int step)
     {
         int sum = 0;
         while (start <= end)
@@ -35,11 +34,11 @@ namespace CodeWarsSolutions
         }
         return sum;
     }
-    public static int SequenceSum(int start, int end, int step)
+    public static int SequenceSum3(int start, int end, int step)
     {
-        return start == end ? end : start > end ? 0 : SequenceSum(start + step, end, step) + start;
+        return start == end ? end : start > end ? 0 : SequenceSum4(start + step, end, step) + start;
     }
-    public static int SequenceSum(int start, int end, int step)
+    public static int SequenceSum5(int start, int end, int step)
     {
         if (start > end)
         {
@@ -50,7 +49,7 @@ namespace CodeWarsSolutions
 
         return start * (n + 1) + step * n * (n + 1) / 2;
     }
-    public static int SequenceSum(int start, int end, int step)
+    public static int SequenceSum6(int start, int end, int step)
     {
         int sum = 0;
 
@@ -64,7 +63,7 @@ namespace CodeWarsSolutions
 
         return sum;
     }
-    public static int SequenceSum(int start, int end, int step)
+    public static int SequenceSum7(int start, int end, int step)
     {
         if (start > end) return 0;
         int sum = 0;
@@ -72,4 +71,6 @@ namespace CodeWarsSolutions
             sum += i;
         return sum;
     }
+}
+
 }

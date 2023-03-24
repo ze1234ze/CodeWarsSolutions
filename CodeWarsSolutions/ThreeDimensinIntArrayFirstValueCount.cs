@@ -13,9 +13,8 @@ namespace CodeWarsSolutions
 {
     internal class ThreeDimensinIntArrayFirstValueCount
     {
-    }
 
-    public static int SumOfMinimums(int[,] numbers)
+    public static int SumOfMinimums1(int[,] numbers)
     {
         var sum = 0;
         for (int i = 0; i < numbers.GetLength(0); i++)
@@ -31,14 +30,14 @@ namespace CodeWarsSolutions
         return sum;
     }
 
-    public static int SumOfMinimums(int[,] numbers)
+    public static int SumOfMinimums2(int[,] numbers)
     {
         return Enumerable.Range(0, numbers.GetLength(0))
                     .Select(i => Enumerable.Range(0, numbers.GetLength(1)).Select(j => numbers[i, j]))
                     .Sum(row => row.Min());
     }
 
-    public static int SumOfMinimums(int[,] numbers)
+    public static int SumOfMinimums3(int[,] numbers)
     {
         int result = 0;
         List<int> list = new List<int>();
@@ -54,15 +53,17 @@ namespace CodeWarsSolutions
         return result;
     }
 
-    public static int SumOfMinimums(int[,] numbers)
+    public static int SumOfMinimums4(int[,] numbers)
     {
         return Enumerable.Range(0, numbers.GetLength(0))
                      .Select(x => Enumerable.Range(0, numbers.GetLength(1)).Select(y => numbers[x, y]))
                      .Sum(x => x.Min());
     }
 
-    public static int SumOfMinimums(int[,] numbers)
+    public static int SumOfMinimums5(int[,] numbers)
     {
         return numbers.Cast<int>().Chunk(numbers.GetLength(1)).Sum(x => x.Min());
     }
+}
+
 }

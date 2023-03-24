@@ -21,8 +21,7 @@ namespace CodeWarsSolutions
 {
     internal class StringCharsRepeat
     {
-    }
-    public static bool IsIsogram(string str)
+    public static bool IsIsogram1(string str)
     {
         str = str.ToLower();
         for (int i = 0; i < str.Length; i++)
@@ -34,7 +33,7 @@ namespace CodeWarsSolutions
         }
         return true;
     }
-    public static bool IsIsogram(string str)
+    public static bool IsIsogram2(string str)
     {
         return !Regex.IsMatch(str, @"([a-z]).*\1", RegexOptions.IgnoreCase);
     }
@@ -53,12 +52,14 @@ namespace CodeWarsSolutions
         return true;
     }
     
-          public static bool IsIsogram(string str)
+          public static bool IsIsogram3(string str)
     {
         return new HashSet<char>(str.ToLower()).Count == str.Length;
     }
-    public static bool IsIsogram(string str)
+    public static bool IsIsogram4(string str)
     {
         return str.Length == new HashSet<char>(str.ToLower()).Count;
     }
+}
+
 }

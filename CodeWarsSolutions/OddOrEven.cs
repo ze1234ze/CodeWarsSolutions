@@ -10,8 +10,7 @@ namespace CodeWarsSolutions
 {
     internal class OddOrEven
     {
-    }
-    public static string EvenOrOdd(int number)
+    public static string EvenOrOdd1(int number)
     {
         if (number % 2 == 0)
         {
@@ -20,15 +19,17 @@ namespace CodeWarsSolutions
         }
         else return "Odd";
     }
-    public static string EvenOrOdd(int number)
+    public static string EvenOrOdd2(int number)
     {
         return number % 2 == 0 ? "Even" : "Odd";
     }
-    public static string EvenOrOdd(int number)
+    public static string EvenOrOdd3(int number)
  => number % 2 == 0 ? "Even" : "Odd";
-    public static string EvenOrOdd(int number)
+    public static string EvenOrOdd4(int number)
     {
         return number % 2 == 0 ? "Even" : "Odd";
     }
+
+}
 
 }

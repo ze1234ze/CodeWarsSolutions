@@ -15,13 +15,12 @@ namespace CodeWarsSolutions
 {
     internal class BoolsInArrayCount
     {
-    }
 
-    public static int CountSheeps(bool[] sheeps)
+    public static int CountSheeps1(bool[] sheeps)
     {
         return sheeps.Count(s => s);
     }
-    public static int CountSheeps(bool[] sheeps)
+    public static int CountSheeps2(bool[] sheeps)
     {
         int count = 0;
         foreach (bool sheep in sheeps)
@@ -30,7 +29,7 @@ namespace CodeWarsSolutions
         }
         return count;
     }
-    public static int CountSheeps(bool[] sheeps)
+    public static int CountSheeps3(bool[] sheeps)
     {
         int numTrue = 0;
         //TODO
@@ -43,7 +42,7 @@ namespace CodeWarsSolutions
         }
         return numTrue;
     }
-    public static int CountSheeps(bool[] sheeps)
+    public static int CountSheeps4(bool[] sheeps)
     {
         int sheepsCount = 0;
 
@@ -58,7 +57,7 @@ namespace CodeWarsSolutions
         return sheepsCount;
     }
     //Ungefähre meine Lösung
-    public static int CountSheeps(bool[] sheeps)
+    public static int CountSheeps5(bool[] sheeps)
     {
         int answer = 0;
         for (int i = 0; i < sheeps.Length; i++)
@@ -67,4 +66,6 @@ namespace CodeWarsSolutions
         }
         return answer;
     }
+}
+
 }

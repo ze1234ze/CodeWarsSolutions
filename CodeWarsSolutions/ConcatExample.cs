@@ -8,7 +8,6 @@ namespace CodeWarsSolutions
 {
     internal class ConcatExample
     {
-    }
 
 public class Animal
     {
@@ -40,6 +39,7 @@ public class Animal
             Console.WriteLine(output);
         }
     }
-    // The example displays the following output:
-    //  
+   
+}
+
 }

@@ -12,9 +12,8 @@ namespace CodeWarsSolutions
 {
     internal class DeleteAllDoubleChars
     {
-    }
 
-    public static String Accum(string input)
+    public static String Accum1(string input)
     {
         var parts =
           // Take the string
@@ -28,7 +27,7 @@ namespace CodeWarsSolutions
         return String.Join("-", parts);
     }
 
-    public static String Accum(string s)
+    public static String Accum2(string s)
     {
         // your code
         string result = "";
@@ -57,7 +56,7 @@ namespace CodeWarsSolutions
         return result;
     }
 
-    public static string Accum(string s)
+    public static string Accum3(string s)
     {
         if (s.Length < 1) return "";
 
@@ -74,7 +73,7 @@ namespace CodeWarsSolutions
     {
         return string.Join("-", s.ToLower().Select((c, i) => char.ToUpper(c) + new string(c, i)));
     }
-    public static String Accum(string s)
+    public static String Accum4(string s)
     {
         string result = "";
         int count = 0;
@@ -88,7 +87,7 @@ namespace CodeWarsSolutions
         return result;
     }
 
-    public static String Accum(string s)
+    public static String Accum5(string s)
     {
         int count = 0;
         string result = "";
@@ -102,5 +101,7 @@ namespace CodeWarsSolutions
         }
         return result;
     }
-    public static string Accum(string s) => string.Join("-", s.ToLower().Select((x, i) => char.ToUpper(x) + new string(x, i)));
+    public static string Accum6(string s) => string.Join("-", s.ToLower().Select((x, i) => char.ToUpper(x) + new string(x, i)));
+}
+
 }

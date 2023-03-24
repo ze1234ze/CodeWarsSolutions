@@ -16,12 +16,11 @@ namespace CodeWarsSolutions
 {
     internal class TheSmallestIntInArray
     {
-    }
-    public static int FindSmallestInt(int[] args)
+    public static int FindSmallestInt1(int[] args)
     {
         return args.Min();
     }
-    public static int FindSmallestInt(int[] args)
+    public static int FindSmallestInt2(int[] args)
     {
         int small = args[0];
         foreach (int num in args)
@@ -33,17 +32,17 @@ namespace CodeWarsSolutions
         }
         return small;
     }
-    public static int FindSmallestInt(int[] args)
+    public static int FindSmallestInt3(int[] args)
     {
         Array.Sort(args);
 
         return args[0];
     }
-    public static int FindSmallestInt(int[] args)
+    public static int FindSmallestInt4(int[] args)
     {
         return Enumerable.Min(args);
     }
-    public static int FindSmallestInt(int[] args)
+    public static int FindSmallestInt5(int[] args)
     {
         int min = args[0];
 
@@ -54,4 +53,6 @@ namespace CodeWarsSolutions
 
         return min;
     }
+}
+
 }

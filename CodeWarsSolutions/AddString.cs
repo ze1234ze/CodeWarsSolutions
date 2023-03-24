@@ -11,48 +11,46 @@ namespace CodeWarsSolutions
 {
     internal class AddString
     {
-    }
-    public static string repeatStr(int n, string s)
-    {
-        return String.Concat(Enumerable.Repeat(s, n));
-    }
-    public static string repeatStr(int n, string s)
-    {
-        var res = "";
-        for (int i = 0; i < n; i++)
-        {
-            res += s;
-        }
-        return res;
-    }
-    public static string repeatStr(int n, string s)
-    {
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < n; i++)
-        {
-            builder.Append(s);
-        }
-        return builder.ToString();
-    }
-    public static string repeatStr(int n, string s)
-    {
-        return string.Concat(Enumerable.Repeat(s, n));
-    }
-    public static string repeatStr(int n, string s)
-    {
-        string a = s;
-        while (--n > 0) a += s;
-        return a;
-    }
-    public static string repeatStr(int n, string s)
-    {
-        string t = "";
 
-        for (int i = 0; i < n; i++)
+        public static string repeatStr1(int n, string s)
         {
-            t = s + t;
+            return String.Concat(Enumerable.Repeat(s, n));
         }
-        return t;
-    }
+        public static string repeatStr2(int n, string s)
+        {
+            var res = "";
+            for (int i = 0; i < n; i++)
+            {
+                res += s;
+            }
+            return res;
+        }
+        public static string repeatStr3(int n, string s)
+        {
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < n; i++)
+            {
+                builder.Append(s);
+            }
+            return builder.ToString();
+        }
 
+        public static string repeatStr4(int n, string s)
+        {
+            string a = s;
+            while (--n > 0) a += s;
+            return a;
+        }
+        public static string repeatStr5(int n, string s)
+        {
+            string t = "";
+
+            for (int i = 0; i < n; i++)
+            {
+                t = s + t;
+            }
+            return t;
+        }
+
+    }
 }

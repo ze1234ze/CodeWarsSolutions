@@ -13,18 +13,19 @@ namespace CodeWarsSolutions
 {
     internal class StringFirstLetterToUpperCase
     {
-    }
-    public static string Greet(string name)
+    public static string Greet1(string name)
     {
         return $"Hello {name.ToUpper()[0] + name[1..].ToLower()}!";
     }
-    public static string Greet(string name) => $"Hello {CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower())}!";
-    public static string Greet(string name) => "Hello " + name.ElementAt(0).ToString().ToUpper() + name.Substring(1).ToLower() + "!";
-    public static string Greet(string name)
+    public static string Greet2(string name) => $"Hello {CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower())}!";
+    public static string Greet3(string name) => "Hello " + name.ElementAt(0).ToString().ToUpper() + name.Substring(1).ToLower() + "!";
+    public static string Greet4(string name)
     {
         string temp = name.ToLower();
         TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
         string result = myTI.ToTitleCase(temp);
         return "Hello " + result + "!";
     }
+}
+
 }

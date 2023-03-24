@@ -13,36 +13,21 @@ namespace CodeWarsSolutions
 {
     internal class StringLeehrAustauschen
     {
+        public static string NoSpac1e(string input)
+        {
+            return input.Replace(" ", "");
+        }
+    
+        public static string NoSpace2(string input)
+        {
+            return input.Replace(" ", string.Empty);
+        }
+    
+        public static string NoSpace3(string input)
+        {
+            return input != null ? input.Replace(" ", "") : null;
+        }
+     }
+  
 
-    }
-    namespace Solution
-    {
-        public static class SpacesRemover
-        {
-            public static string NoSpace(string input)
-            {
-                return input.Replace(" ", "");
-            }
-        }
-    }
-    namespace Solution
-    {
-        public static class SpacesRemover
-        {
-            public static string NoSpace(string input)
-            {
-                return input.Replace(" ", string.Empty);
-            }
-        }
-    }
-    namespace Solution
-    {
-        public static class SpacesRemover
-        {
-            public static string NoSpace(string input)
-            {
-                return input != null ? input.Replace(" ", "") : null;
-            }
-        }
-    }
 }

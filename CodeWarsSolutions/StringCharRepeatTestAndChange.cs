@@ -19,15 +19,14 @@ namespace CodeWarsSolutions
 {
     internal class StringCharRepeatTestAndChange
     {
-    }
 
-    public static string BandNameGenerator(string str)
+    public static string BandNameGenerator1(string str)
     {
         var name = char.ToUpper(str[0]) + str.Substring(1);
         return str.First() != str.Last() ? $"The {name}" : name + str.Substring(1);
     }
 
-    public static string BandNameGenerator(string str)
+    public static string BandNameGenerator2(string str)
     {
         if (str[0] == str[str.Length - 1])
         {
@@ -41,7 +40,7 @@ namespace CodeWarsSolutions
         }
     }
 
-    public static string BandNameGenerator(string str)
+    public static string BandNameGenerator3(string str)
     {
         if (str[0] != str[str.Length - 1])
         {
@@ -57,5 +56,7 @@ namespace CodeWarsSolutions
         }
         return str;
     }
+
+}
 
 }

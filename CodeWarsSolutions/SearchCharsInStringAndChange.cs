@@ -15,9 +15,8 @@ namespace CodeWarsSolutions
 {
     internal class SearchCharsInStringAndChange
     {
-    }
 
-    public static string Uncensor(string infected, string discovered)
+    public static string Uncensor1(string infected, string discovered)
     {
         var result = string.Empty;
         var index = 0;
@@ -38,7 +37,7 @@ namespace CodeWarsSolutions
         return result;
     }
 
-    public static string Uncensor(string infected, string discovered)
+    public static string Uncensor2(string infected, string discovered)
     {
         char[] res = new char[infected.Length];
         int j = 0;
@@ -57,11 +56,11 @@ namespace CodeWarsSolutions
         return new string(res);
     }
 
-    public static string Uncensor(string infected, string discovered, int i = 0)
+    public static string Uncensor3(string infected, string discovered, int i = 0)
     {
         return string.Concat(infected.Select(x => x == '*' ? discovered[i++] : x));
     }
-    public static string Uncensor(string infected, string discovered)
+    public static string Uncensor4(string infected, string discovered)
     {
         var result = new StringBuilder(infected);
 
@@ -77,12 +76,12 @@ namespace CodeWarsSolutions
         return result.ToString();
     }
 
-    public static string Uncensor(string infected, string discovered, int i = 0)
+    public static string Uncensor5(string infected, string discovered, int i = 0)
     {
         return Regex.Replace(infected, @"\*", (x) => discovered[i++].ToString());
     }
 
-    public static string Uncensor(string infected, string discovered)
+    public static string Uncensor6(string infected, string discovered)
     {
         var indexes =
             infected.Select((n, i) => n == '*' ? i : -1)
@@ -92,4 +91,6 @@ namespace CodeWarsSolutions
 
         return string.Concat(updated);
     }
+}
+
 }

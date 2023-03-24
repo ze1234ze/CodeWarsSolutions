@@ -22,18 +22,17 @@ namespace CodeWarsSolutions
 {
     internal class CoockingEggsInt
     {
-    }
-    public static int CookingTime(int eggs)
+    public static int CookingTime1(int eggs)
     {
         return (eggs + 7) / 8 * 5;
     }
 
-    public static int CookingTime(int eggs)
+    public static int CookingTime2(int eggs)
     {
         return 5 * (int)Math.Ceiling(eggs / 8d);
     }
 
-    public static int CookingTime(int eggs)
+    public static int CookingTime3(int eggs)
     {
         // Keep track of how many minutes it took to cook the eggs
         int runTime = 0;
@@ -63,7 +62,7 @@ namespace CodeWarsSolutions
         // Finally, return how long it took
         return runTime;
     }
-    public static int CookingTime(int eggs)
+    public static int CookingTime4(int eggs)
     {
         // TODO
 
@@ -84,7 +83,7 @@ namespace CodeWarsSolutions
 
     }
 
-    public static int CookingTime(int eggs)
+    public static int CookingTime5(int eggs)
     {
         if (eggs == 0)
         {
@@ -112,7 +111,7 @@ namespace CodeWarsSolutions
         }
     }
 
-    public static int CookingTime(int eggs)
+    public static int CookingTime6(int eggs)
     {
         // TODO
         int number = eggs / 8;
@@ -121,4 +120,6 @@ namespace CodeWarsSolutions
 
         return number * 5;
     }
+}
+
 }
