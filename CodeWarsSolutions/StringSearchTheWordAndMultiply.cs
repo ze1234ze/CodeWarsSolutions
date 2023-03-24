@@ -19,9 +19,8 @@ namespace CodeWarsSolutions
 {
     internal class StringSearchTheWordAndMultiply
     {
-    }
 
-    public static string ModifyMultiply(string str, int loc, int num)
+    public static string ModifyMultiply1(string str, int loc, int num)
     {
         List<string> result = new List<string>();
         string word = str.Split(' ')[loc];
@@ -31,12 +30,12 @@ namespace CodeWarsSolutions
         return System.String.Join("-", result);
     }
 
-    public static string ModifyMultiply(string str, int loc, int num)
+    public static string ModifyMultiply2(string str, int loc, int num)
     {
         return string.Join('-', Enumerable.Repeat(str.Split(' ')[loc], num));
     }
 
-    public static string ModifyMultiply(string str, int loc, int num)
+    public static string ModifyMultiply3(string str, int loc, int num)
     {
         var res = "";
         var words = str.Split(" ");
@@ -46,10 +45,10 @@ namespace CodeWarsSolutions
         return res;
     }
 
-    public static string ModifyMultiply(string str, int loc, int num)
+    public static string ModifyMultiply4(string str, int loc, int num)
       => string.Join('-', Enumerable.Repeat(str.Split(' ')[loc], num));
 
-    public static string ModifyMultiply(string str, int loc, int num)
+    public static string ModifyMultiply5(string str, int loc, int num)
     {
         try
         {
@@ -73,7 +72,7 @@ namespace CodeWarsSolutions
         }
     }
 
-    public static string ModifyMultiply(string str, int loc, int num)
+    public static string ModifyMultiply6(string str, int loc, int num)
     {
         string[] words = str.Split(" ");
         string selected = words[loc];
@@ -87,4 +86,5 @@ namespace CodeWarsSolutions
         return result;
     }
 
+}
 }

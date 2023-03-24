@@ -23,19 +23,18 @@ namespace CodeWarsSolutions
 {
     internal class StringDevideByThreeMethod
     {
-    }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree1(string n)
     {
         return BigInteger.Parse(n) % 3 == 0;
     }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree2(string n)
     {
         return n.Sum(x => x) % 3 == 0;
     }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree3(string n)
     {
         var numSequence = n.ToCharArray();
         var res = 0;
@@ -49,12 +48,12 @@ namespace CodeWarsSolutions
             return false;
     }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree4(string n)
     {
         return n.Select(x => int.Parse(x.ToString())).Sum() % 3 == 0;
     }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree5(string n)
     {
         int a = 0;
         foreach (char s in n)
@@ -64,12 +63,12 @@ namespace CodeWarsSolutions
         return a % 3 == 0;
     }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree6(string n)
     {
         return n.Sum(n => char.GetNumericValue(n)) % 3 == 0;
     }
 
-    public static bool DivisibleByThree(string n)
+    public static bool DivisibleByThree7(string n)
     {
         int sum = 0;
         char[] array = n.ToCharArray();
@@ -83,4 +82,5 @@ namespace CodeWarsSolutions
     }
 
 
+}
 }

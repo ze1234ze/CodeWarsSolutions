@@ -18,9 +18,8 @@ namespace CodeWarsSolutions
 {
     internal class SearchDoubleValueIntArray
     {
-    }
 
-    public static int[] solve(int[] arr)
+    public static int[] Solve1(int[] arr)
     {
         List<int> output = new List<int>();
 
@@ -37,17 +36,17 @@ namespace CodeWarsSolutions
         return output.ToArray();
     }
 
-    public static int[] solve(int[] arr)
+    public static int[] Solve2(int[] arr)
     {
         return arr.Reverse().Union(arr).Reverse().ToArray();
     }
 
-    public static int[] solve(int[] arr)
+    public static int[] Solve3(int[] arr)
     {
         return new HashSet<int>(arr.Reverse()).Reverse().ToArray();
     }
 
-    public static int[] solve(int[] arr)
+    public static int[] Solve4(int[] arr)
     {
         var stack = new Stack<int>();
         foreach (int x in arr.Reverse())
@@ -60,13 +59,13 @@ namespace CodeWarsSolutions
         return stack.ToArray();
     }
 
-    public static int[] solve(int[] arr)
+    public static int[] solve5(int[] arr)
     {
 
         return arr.Where((x, i) => !arr.Skip(i + 1).Contains(x)).ToArray();
     }
 
-    public static int[] solve(int[] arr)
+    public static int[] Solve6(int[] arr)
     {
         var list = new List<int>();
         for (int i = arr.Length - 1; i >= 0; i--)
@@ -79,4 +78,6 @@ namespace CodeWarsSolutions
         list.Reverse();
         return list.ToArray();
     }
+}
+
 }

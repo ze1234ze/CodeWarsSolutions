@@ -41,21 +41,20 @@ namespace CodeWarsSolutions
 {
     internal class MultyThreadingParalellInvoke
     {
-    }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute1(Action a, int nTimes)
     {
         Parallel.For(0, nTimes, x => a());
     }
 
-    public void Execute(Action a, int nTimes) => Parallel.ForEach(Enumerable.Range(1, nTimes), (i) => a());
+    public void Execute2(Action a, int nTimes) => Parallel.ForEach(Enumerable.Range(1, nTimes), (i) => a());
 
-    public void Execute(Action a, int nTimes)
+    public void Execute3(Action a, int nTimes)
     {
         Task.WaitAll(Enumerable.Repeat(1, nTimes).Select(i => Task.Factory.StartNew(a)).ToArray());
     }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute4(Action a, int nTimes)
     {
         List<Thread> threads = new List<Thread>();
 
@@ -70,7 +69,7 @@ namespace CodeWarsSolutions
         }
     }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute5(Action a, int nTimes)
     {
         var arr = new Action[nTimes];
         for (var i = 0; i < nTimes; i++)
@@ -78,7 +77,7 @@ namespace CodeWarsSolutions
         Parallel.Invoke(arr);
     }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute6(Action a, int nTimes)
     {
         Action[] actions = new Action[nTimes];
         for (int i = 0; i < nTimes; i++)
@@ -88,12 +87,12 @@ namespace CodeWarsSolutions
         Parallel.Invoke(actions);
     }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute7(Action a, int nTimes)
     {
         System.Threading.Tasks.Parallel.For(0, nTimes, _ => a());
     }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute8(Action a, int nTimes)
     {
         var list = new List<Action>();
         for (int i = 0; i < nTimes; i++)
@@ -104,7 +103,7 @@ namespace CodeWarsSolutions
         Parallel.Invoke(list.ToArray());
     }
 
-    public void Execute(Action a, int nTimes)
+    public void Execute9(Action a, int nTimes)
     {
         for (int i = 0; i < nTimes; i++)
         {
@@ -114,5 +113,7 @@ namespace CodeWarsSolutions
         }
     }
 
+
+}
 
 }

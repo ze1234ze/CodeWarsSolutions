@@ -20,11 +20,12 @@ namespace CodeWarsSolutions
 {
     internal class CountParametersInArrayOfObjects
     {
-    }
 
-    public static int CountArgs(params dynamic[] args) => args.Length;
+    public static int CountArgs1(params dynamic[] args) => args.Length;
 
-    public static int CountArgs(params object[] o) => o.Length;
+    public static int CountArgs2(params object[] o) => o.Length;
 
+
+}
 
 }
